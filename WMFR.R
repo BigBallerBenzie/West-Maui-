@@ -71,8 +71,9 @@ wmfr_rgb_contrast = scales::rescale(wmfr_rgb_rescale,to=c(.15,1))
 plot_map(wmfr_rgb_contrast)
 
 #3d plot
-plot_3d(wmfr_rgb_contrast, wmfrel_matrix, windowsize = c(1100,900), zscale = 15, shadowdepth = -50,
+plot_3d(wmfr_rgb_contrast, wmfrel_matrix, windowsize = c(1800,2400), zscale = 15, shadowdepth = -50,
         zoom=0.5, phi=65,theta=0,fov=70, background = "#F2E1D0", shadowcolor = "#523E2B")
+render_highquality('maui', lightintensity =700, samples = 400, width = 7200, height = 4800) 
 
 render_snapshot(title_text = "West Maui Forest Reserve, Hawaii | Imagery: Landsat 8 | DEM: 30m SRTM",
                 title_bar_color = "#1f5214", title_color = "white", title_bar_alpha 
